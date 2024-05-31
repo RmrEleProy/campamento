@@ -1,0 +1,86 @@
+.containernavbar{
+    /* position: fixed; */
+    top: 15%;
+    left: 0;
+    width: 100vw;
+    padding: 0;
+    background: transparent;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar {
+    position: fixed;
+    top: 15%;
+    display: flex;
+    justify-content: space-around;
+    /* padding: 0.01em 1em; */
+    font-size: 1.5em !important;
+    backdrop-filter: blur(10px);
+    transition: 1s ease;
+    overflow: hidden;
+    width: 0;
+}
+
+.navbar::after,
+.navbar::before {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.enlace {
+    text-decoration: none;
+    text-align: center;
+    color: var(--color-texto);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#menuchecheck {
+    display: none;
+}
+
+.menuicons  {
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    transition: 1s ease;
+    position: fixed;
+    top: 15%;
+    right: 1.5%;
+}
+
+.menuicons #closeicon {
+    display: none;
+}
+
+#menuchecheck:checked~.menuicons #menuicon {
+    display: none;
+}
+
+#menuchecheck:checked~.menuicons #closeicon {
+    display: inline-flex;
+}
+
+#menuchecheck:checked~.navbar {
+    width: 100vw;
+    position: fixed;
+    overflow: visible;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        height: 0;
+        width: 100vw;
+        overflow: hidden;
+        transition: 3s ease;
+    }
+
+    #menuchecheck:checked~.navbar {
+        height: 16rem ;
+    }
+}

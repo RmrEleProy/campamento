@@ -1,0 +1,37 @@
+.content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.box {
+    padding: 20px;
+    border: 1px solid #fff;
+}
+
+.box__tittle {
+    text-align: center;
+}
+
+.box__content {
+    display: flex;
+    flex-direction: row;
+}
+
+.box__article {
+    width: 50vw;
+}
+
+.img{
+    padding: 0 6px;
+    float: left;
+    width: 24%;
+    height: 24%;
+}
+
+@media (max-width: 800px) {
+    .box__content{
+        flex-direction: column;
+    }
+}

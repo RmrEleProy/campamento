@@ -1,0 +1,20 @@
+/* Definir colores para el modo claro */
+:root {
+    --colores-fondo: #ff7e5f, #feb47b, #ff7c7c, #f78888, #f3a683;
+    --url-imagenFondo: url("/static/img/fondo/boio.jpg");
+
+    --color-texto: rgb(2, 7, 70);
+    --dropdown-bgcolor: rgba(250, 250, 250, 0.522);
+    --dropdown-hocolor: rgb(241, 241, 241);
+}
+
+/* Definir colores para el modo oscuro */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --colores-fondo: #2C3E50, #34495E, #7F8C8D, #95A5A6, #BDC3C7;
+        --url-imagenFondo: url("/static/img/fondo/boioN.png");
+        --color-texto: rgb(52, 52, 52);
+        --dropdown-bgcolor: #201e5661;
+        --dropdown-hocolor: #05020297;
+    }
+}
