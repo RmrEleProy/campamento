@@ -37,7 +37,7 @@ body {
 
 .title__page {
     font-family: jaro;
-    font-size: 1em;
+    font-size: clamp(70px, 15vw, 260px);
     text-align: center;
     background-image: linear-gradient(to left, #FFD700, #7B68EE, #3498db, #2ecc71, #FFD700);
     color: transparent;
